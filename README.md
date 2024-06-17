@@ -46,6 +46,10 @@ In this approach we create a Arraylist to store the values of the two arrays usi
 
 >To learn more about the approach [refer](https://youtu.be/6s97yEBQaGQ?si=uoL4RSOsEiWGQCIR "PatchingArray Solved by Aryan Mittal"). Credits to [AryanMittal](https://www.youtube.com/@ARYANMITTAL) for Solving the problem.
 
+## 6.Sum of Square Numbers:(SumofSquare.java)
+**Description:** Given a non-negative integer c, decide whether there're two integers a and b such that a<sup>2</sup> + b<sup>2</sup> = c.
+
+**Approach:** As we already know that c is the sum of square of two numbers we can also assume that **b<sup>2</sup> = c - a<sup>2</sup>**. Declare a loop from 0 and check if the square of the number is less than c to make sure it doesnt exceed the sum and at each iteration find the square root of **b<sup>2</sup>** using the above formula.Now check if the square root is gives a complete number by checking if its equal to the integer equivalent of the number.If so return true else if the loop exceed the condition print false.
 
 
 
