@@ -51,5 +51,13 @@ In this approach we create a Arraylist to store the values of the two arrays usi
 
 **Approach:** As we already know that c is the sum of square of two numbers we can also assume that **b<sup>2</sup> = c - a<sup>2</sup>**. Declare a loop from 0 and check if the square of the number is less than c to make sure it doesnt exceed the sum and at each iteration find the square root of **b<sup>2</sup>** using the above formula.Now check if the square root is gives a complete number by checking if its equal to the integer equivalent of the number.If so return true else if the loop exceed the condition print false.
 
+## 7.Most Profit Assigning Work:(MostProfit.java)
+**Description:** You have n jobs and m workers. You are given three arrays: difficulty, profit, and worker where difficulty[i] and profit[i] are the difficulty and the profit of the ith job, and worker[j] is the ability of jth worker (i.e., the jth worker can only complete a job with difficulty at most worker[j]).Every worker can be assigned at most one job, but one job can be completed multiple times.
 
+**Approach:** We are aware that the workers are limited to a certain ability. So in order to get the maximum profit let us use the maximum ability from the workers array. Declare a array jobs of size maximum ability + 1.Now the maximum ability comes handy, create a loop of size difficulty array and for each iteration check if each element of difficulty is less than or equal to the maximum ability of the workers, this way we can avoid the works that has a higher difficulty than the workers can perform and for each of these difficulties insert the maximum of the value at jobs where index is the difficulty and the profit of the respective work i.Now let us find the maxima of the job elements. This is to find get the maximum profit for a certain range of works.Let us see how it works visually.
 
+![Alt text](images/Maxima.png "Example for Maxima")
+
+As we can see if we have the workers ability as 4 then from the maxima array we can find that the maximum profit is 20. Similarly we'll change the jobs array and create a loop to traverse the worker array and find the maximum profit work for each worker add them and return.
+
+>Note: There is yet another to solve this problem by combining difficulty and profit array in a ArrayList and sorting them based on the difficulty and also sorting the worker array. Now for each worker ability we'll find the maximum profit using the ArrayList.For More detail analysis [refer](https://youtu.be/V-gYS2b8Ux0?si=NB7Gjsz2fDPiCnge "Most Profit Assigning Work Solved by Aryan Mittal"). 
