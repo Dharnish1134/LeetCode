@@ -19,3 +19,10 @@ The second approach is to traverse through the array and check for two condition
 
 **Approach:**
 We are given two strings s and t, to check if they are anagram create a integer array of size 26. create two loops that iterates through the characters in each string. At each iteration find the difference of the character and { a }. This difference when used as a index of the array will implicitly convert to the integer equivalent which will be in the range of (0-25). In the first loop increment at each index and in the second loop decrement at each index. Now in a third loop check if any value in the array of size 26 is not equal to zero if so then it is not a anagram and return false.else return true.
+
+## 3.Two Sum:(TwoSum.java)
+**Description:** Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.You may assume that each input would have exactly one solution, and you may not use the same element twice.You can return the answer in any order.
+
+**Approach:** To find the index of two numbers that can add up to target number, we can use a hashmap as a hashmap is easy way to retrive elements using a key value pair structure. Traverse through the array and for each element find the difference of the target and the number which will be the required number to satisfy the condition. Now check if this number is present in the HashMap if so return the value of that key and the index of the current number which is i from the loop. If not add the number as key and its index (i) as value to the HashMap.If the pair does not exit return a empty array.
+
+ 
