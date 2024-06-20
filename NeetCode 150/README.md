@@ -25,4 +25,9 @@ We are given two strings s and t, to check if they are anagram create a integer 
 
 **Approach:** To find the index of two numbers that can add up to target number, we can use a hashmap as a hashmap is easy way to retrive elements using a key value pair structure. Traverse through the array and for each element find the difference of the target and the number which will be the required number to satisfy the condition. Now check if this number is present in the HashMap if so return the value of that key and the index of the current number which is i from the loop. If not add the number as key and its index (i) as value to the HashMap.If the pair does not exit return a empty array.
 
+## 4.Group Anagrams:(GroupAnagram.java)
+**Description:** Given an array of strings strs, group the anagrams together. You can return the answer in any order.An Anagram is a word or phrase formed by rearranging the letters of a different word or phrase, typically using all the original letters exactly once.
+
+**Approach:** We can use a HashMap to check for finding the group of anagrams. As we know that anagrams are words that has same characters in different orders. So no matter how the characters are shufffled if we sort the string we get the same string if they are anagram. We can use the sortedString as a key and add the strings that has the same sortedString in a arraylist as value.Now we can return these groups as a new ArrayList which will have the list of all the strings that are anagrams.
+
  
