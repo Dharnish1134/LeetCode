@@ -30,4 +30,8 @@ We are given two strings s and t, to check if they are anagram create a integer 
 
 **Approach:** We can use a HashMap to check for finding the group of anagrams. As we know that anagrams are words that has same characters in different orders. So no matter how the characters are shufffled if we sort the string we get the same string if they are anagram. We can use the sortedString as a key and add the strings that has the same sortedString in a arraylist as value.Now we can return these groups as a new ArrayList which will have the list of all the strings that are anagrams.
 
+## 5.Top k frequent Elements:(Topk.java)
+**Description:** Given an integer array nums and an integer k, return the k most frequent elements. You may return the answer in any order.
+
+**Approach:** There a multiple approaches to solve the problem but using the min and max values of the array to minimise the number of iterations to be made significantly increases the performance. First find the minimum and maximum value of the array. Now we know the range of elements in the array, so instead of creating a frequency array of size max we can reduce it to (max-min+1). Now traverse the nums array and for each element we can find the equivalent number in the range by subtracting the num by minimum and in that index increment the value. Now in a bucket array use the frequency array as index and add the values with the corresponding index by simple add the i with minimum (i+minimum). Now we can traverse the bucket array in reverse order and find the top k frequent elements.
  
