@@ -39,3 +39,14 @@ We are given two strings s and t, to check if they are anagram create a integer 
 **Description:** Design an algorithm to encode a list of strings to a single string. The encoded string is then decoded back to the original list of strings.
 
 **Approach:** Its easy to implement the logic for encoding and decoding. In th encode method simple create a string builder, Iterate through the String list and for each String append the length of the string followed by a "#" followed by the string. Now we got the encoded String.In the decode method create a list and in the string,initialise i with 0,assign i to j loop j until we get a "#".Now get the length of the arrray by converting the substring from i to j to integer. Now use this length to increment the i to the end index of the string. Now add the substring from j+1(ignoring "#") i to the list and continue until i is greater than the length of the string. Return the decoded list.
+
+## 7.Longest Substring Without Repeating Characters:(LongSubstring.java)
+**Description:** Given a string s, find the length of the longest substring without repeating characters.
+
+**Approach:** There are two approaches using sliding window.
+
+1.Using HashSet: In this approach we use two variable a left and a right to iterate through the string. First take the charater at the left position. Declare a loop that runs until the set contains the character at the start. At each iteration Remove that elment from the set and increment the start.Now the window is slided and add the character to the set. calculate the size of the window and update a max variable which stores the maximum size of the window possible.After iterating through the loop return the max variable.
+
+2.Using lastOccurence Array: This is the efficient approach and in this approach we create a array of size 128 which can store the ASCII equivalent of the characters. Now create a left and right variable just like we created in the first approach to define the window.create loop and iterate the right to size of the string. At each iteration take the right character and check if there is a lastOccurence and if its greater than the left variable which essentially check if the value is already in the current window. If so then shift left to the next element of that position. update the lastOccurence of that character. Now calculate the window size and assign it to a max variable which checks the maximum window size possible. After iterating through the loop,return the max variable.
+
+> Note: For a detailed Explanation [refer](https://youtu.be/sQJ2KH1CWg4?si=29j7F1kQEV9681tT).
