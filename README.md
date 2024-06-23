@@ -84,3 +84,10 @@ Given the integer array position and the integer m. Return the required force.
 **Approach:** A Simple approach to solve the problem would be to use the sliding window. We can create a loop of grumpy.length iterations and at each iteration add the value of current window and check if the current window size is greater than the maxWindow size. If the iteration exceeds the number of minutes that is the window size then start sliding the window by decrementing the left most window value at each iteration.After all the iteration create another loop of same size and add all the satisfied customers to a variable and return the sum of this variable and the maxWindow.
 
 > Note: For more detailed and simple explanation of the approach [refer](https://youtu.be/2vI0VpxlOHM?si=xgZBUMvX0vduzMG1 "Grumpy BookStore Owner Solved by AryanMittal"). Credits to [AryanMittal](https://www.youtube.com/@ARYANMITTAL) for Solving the problem.
+
+## 11.Count Number of Nice Subarrays:(NiceArray.java)
+**Description:** Given an array of integers nums and an integer k. A continuous subarray is called nice if there are k odd numbers on it.Return the number of nice sub-arrays.
+
+**Approach:** There are multiple approaches to the problem, But we are using a prefix sum method to find the number of nice arrays. As we need to find the number of odd numbers we can consider the array to be a binary array where 1 is odd and 0 is even. First traverse through the array and check if the number is odd using the "AND &" operator and add the result to a variable which act as the count of odd numbers and once the count reaches k we can consider it as a subarray and add it to the answer. We are not going to simply increment the count, we will create a count array which will count the occurence of a number and we add the (value of the sum of odd - k)th count to the answer. After all the iteration the answer is returned.
+
+> Note : For a more detailed explanation [refer](https://youtu.be/dhu5_v2iY8E?si=e_QnWWTN1-AZe5fj "Count Number of Nice SubArrays solved by AryanMittal.").
