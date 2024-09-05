@@ -104,3 +104,19 @@ Given the integer array position and the integer m. Return the required force.
 **Description:** Given an integer array arr, return true if there are three consecutive odd numbers in the array. Otherwise, return false.
 
 **Approach:** As we need to check if there is three consecutive odds in a array we are traversing through the array and for each iteration check if the element is a odd number using the modulus operation, if so increment a oddCount variable if not make it zero as we only need consecutive odds. also check if the oddCount reaches 3 which means there is three consecutive odds in the array so return true. If nothing is returned after traversing through the array return false.
+
+## [14.Path with Maximum Probability:](https://leetcode.com/problems/path-with-maximum-probability/description/) (MaxProbPath.java)
+**Approach:** We cab use Dijkstra's Algorithm to solve this problem, As the problem wants us to find the maximum probability of reaching each node which is similar to weights. If we use BFS it considers only the number of hops rather than the weight. So first we are creating a Map to store the Node value and the list of its neighbouring node and their respective probability. Insert the values into the map. now lets create a priority queue to store the probability and get the maximum probability always as the queue uses a heap(Note: its a min heap by default but we are using a comparator to make it a max heap). Now we start of by inserting the probability of reaching start node from start node as 1.0. As we traverse through through the graph from the start node to the maximum probability nodes we reach the end node at a point and we get the maxProbabilty to reach the node.
+
+## [15.Find Student that will replace the chalk:](https://leetcode.com/problems/find-the-student-that-will-replace-the-chalk/description/?envType=daily-question&envId=2024-09-02) (ChalkReplace.java)
+
+**Approach:** This is a fairly simple problem, to find the student who should replace the chalk the condition is that the number of chalk available is not sufficient for the student.First we find the remainder of the number of chalk available with the sum of total chalk wanted by each student. This essentially means that the all students get their needed chalk for a number of times, and when the chalk is not enough to satisfy the total chalk needed by all the students then we know that someone from the students will have to replace the chalk and now if we substract the chalk needed by each students one by one we get the case where the chalk is not enough and that index is the student who has to replace the chalk.
+
+## [16.Sum of Digits of string after convert:](https://leetcode.com/problems/sum-of-digits-of-string-after-convert/description/?envType=daily-question&envId=2024-09-03) (SumConvert.java)
+
+**Approach:** Its a fairly simple problem, First we'll iterate through the string the for each character find the equivalet integer and we can add the digits of the integer for the first time when we transform the character to integer itself and now we can add the digits for k-1 times and return the result.
+
+## [17.Find Missing Observation:](https://leetcode.com/problems/find-missing-observations/description/?envType=daily-question&envId=2024-09-05) (MissingObs.java)
+
+**Approach:** This problem can be approached mathematically so we have m number of observation and number of observations in n and the mean and we have the find the possible value of each observation in n. So first we find the sum of n observation using the mean formula, and if the sum is greater than the possible sum that can be acheived(6 * n) then we know that there is no solution. If we have a solution then we can find it by knowing how many parts of number that can be added n times to form the sum(sum / n), and if it is not a natural number then we have to add +1 to the n array (sum%n) number of times. and the remaining with the sum/n number.
+
