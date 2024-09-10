@@ -127,3 +127,7 @@ Given the integer array position and the integer m. Return the required force.
 ## [19.Split Linked List in Parts:](https://leetcode.com/problems/split-linked-list-in-parts/description/?envType=daily-question&envId=2024-09-08) (SplitList.java)
 
 **Approach:** To split the given Linked list there is essentially 2 cases, One is when the list evenly splittable and the second is when the list not evenly splittable. So to find which case it is we have to find the size of the list, Now the Division gives us the nodes that can have (size/k) Nodes and the Modulus gives the Nodes that should have (size/k + 1) nodes and the addition of this results in exactly k splits that differs atmost by 1 node. To Save the space instead of creating a seperate ListNode for each split we are using the Inout ListNode to split by adding null at the end of each split.And the splits are added to a array of LisrNode and returned.
+
+## [20.Insert Greatest Common Divisor in LinkedList:](https://leetcode.com/problems/insert-greatest-common-divisors-in-linked-list/description/?envType=daily-question&envId=2024-09-10) (GCDinList.java)
+
+**Approach:** To find the Gcd of each pair in a linked list n traversals has to be made, So at each traversal we take two adjacent nodes and find the gcd of the value of those nodes usinf euclidean algorithm which basically states that the gcd of the two numbers can also divide the difference of the two numbers. Once the gcd is found it is inserted in the middle of the nodes. and the head is returned.
